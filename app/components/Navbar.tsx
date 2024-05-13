@@ -86,7 +86,7 @@ const Navbar = ()=>{
                     <ul className=" hidden lg:flex flex-1  text-black justify-end gap-3 xl:gap-5 items-center">
                         {menuItems.map((item)=>(
                             <li 
-                                className={`text-lg transition ${isCurrentPath(item.link)?"hover:500 border-b":" text-gray-500"}`} 
+                                className={`text-lg transition ${isCurrentPath(item.link)?" border-b":" hover:text-black text-gray-500"}`} 
                                 key={item.link}
                             >
                                 <Link href={item.link}>{item.title}</Link>
