@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-<<<<<<< HEAD
-=======
 import Navbar from "./components/Navbar";
 import Footer from './components/Footer';
->>>>>>> Updated for Arjun on upwork
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      
+      <body className={`${inter.className} min-h-screen`}>
+        <Navbar/>  
+        <div className=" mt-40">.</div>
+        {children}
+        <div className="min-h-[100vh] items-center mt-40">Scrool down</div>
+        <Footer/>
+      </body>
     </html>
   );
 }
